@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { ClerkProvider } from '@clerk/clerk-react';
+// import { ClerkProvider } from '@clerk/clerk-react';
 
 const WS_URL = "wss://bonk-gambit-backend-production.up.railway.app";
 
