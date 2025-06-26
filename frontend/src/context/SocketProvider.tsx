@@ -1,7 +1,9 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+// import env files
+
 // import { ClerkProvider } from '@clerk/clerk-react';
 
-const WS_URL = import.meta.env.VITE_WEBSOCKET_URL || "ws://localhost:8080";
+const WS_URL = import.meta.env.VITE_WEBSOCKET_URL;
 
 /**
  * Defines the shape of the data provided by the SocketContext.
