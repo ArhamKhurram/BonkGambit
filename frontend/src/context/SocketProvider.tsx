@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
-const WS_URL = "https://bonk-gambit-backend.vercel.app/";
+const WS_URL = "wss://bonk-gambit-backend.vercel.app/";
 
 /**
  * Defines the shape of the data provided by the SocketContext.
