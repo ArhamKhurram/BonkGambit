@@ -1,6 +1,7 @@
+import React from 'react';
 
-export const Button = ({ onClick, children }: { onClick: () => void, children: React.ReactNode }) => {
-    return <button onClick={onClick} className="px-8 py-4 text-2xl bg-green-500 hover:bg-green-700 text-white font-bold rounded">
-        {children}
-    </button>
-}
+export const Button = ({ onClick, children, className = "" }: { onClick: () => void, children: React.ReactNode, className?: string }) => (
+  <button onClick={onClick} className={`px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white font-semibold transition ${className}`}>
+    {children}
+  </button>
+);

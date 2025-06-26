@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom"
 import { Button } from "../components/Button";
 import { SignInButton } from "@clerk/clerk-react";
 
 export const Landing = () => {
-    const navigate = useNavigate();
     return <div className="flex justify-center">
         <div className="pt-8 max-w-screen-lg">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
