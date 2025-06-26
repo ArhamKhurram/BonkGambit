@@ -12,32 +12,19 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Clerk Publishable Key");
 }
 
-const ClerkWithRoutes = () => {
-  return (
-    <ClerkProvider 
-      publishableKey={PUBLISHABLE_KEY} 
-      afterSignOutUrl="/" 
-      afterSignInUrl="/dashboard"
-      afterSignUpUrl="/dashboard"
-    >
-      <Theme>
-        <App />
-      </Theme>
-    </ClerkProvider>
-  )
-}
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <SocketProvider>
         <ClerkProvider
           publishableKey={PUBLISHABLE_KEY}
+          signInFallbackRedirectUrl="/dashboard"
+          signUpFallbackRedirectUrl="/dashboard"
           afterSignOutUrl="/"
-          afterSignInUrl="/dashboard"
-          afterSignUpUrl="/dashboard"
         >
-          <ClerkWithRoutes />
+          <Theme>
+            <App />
+          </Theme>
         </ClerkProvider>
       </SocketProvider>
     </BrowserRouter>
