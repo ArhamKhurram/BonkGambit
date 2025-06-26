@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { Button } from "../components/Button";
+import { SignInButton } from "@clerk/clerk-react";
 
 export const Landing = () => {
     const navigate = useNavigate();
@@ -15,10 +16,13 @@ export const Landing = () => {
                     </div>
 
                     <div className="mt-8 flex justify-center">
-                        <Button onClick={() => {
-                            navigate("/game")
-                        }} >
-                            Play Online
+                        <SignInButton>
+                            <Button onClick={() => {}}>
+                                Sign In with Discord
+                            </Button>
+                        </SignInButton>
+                        <Button onClick={() => {}}>
+                            Play against AI
                         </Button>
                     </div>    
                 </div>
