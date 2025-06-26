@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { ClerkProvider } from '@clerk/clerk-react';
 
-const WS_URL = "wss://bonk-gambit-backend.railway.app/ws";
+const WS_URL = "wss://bonk-gambit-backend-production.up.railway.app";
 
 /**
  * Defines the shape of the data provided by the SocketContext.
